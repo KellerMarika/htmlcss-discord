@@ -83,7 +83,28 @@ p {
     padding-right: 5px;
 }
 
-/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* effetti */
+.btn:hover{
+    box-shadow: 0px 10px 10px #29284141;
+}
+
+.btn.blue:hover{
+    background-color: #9fa6f8;
+}
+.btn.black:hover{
+    background-color: #424255;
+}
+
+.btn.white:hover,
+.btn.white.download:hover i {
+    color: #8590ff;
+}
+
+nav a:hover,
+footer li a:hover{
+    text-decoration: underline;
+
+}
 
 /* nav ........................... */
 nav {
