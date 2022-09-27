@@ -1,94 +1,99 @@
 /* generic */
-:root{
-    --color-dark-grey:#232T2A;
-    --color-violet:rgb(126,145.208);
-    --title-bottom-space:20px;
-    --small-space:10px 0px;
-    --medium-space:40px 0px;
-    --meidum-bottom-space:40px; 
-    --large-space:80px;
-    --large-bottom-space: 80px;
-   
+:root {
+    /* dimensioni */
 
+    --space-XS: 10px;
+    --space-S: 20px;
+    --space-M: 40px;
+    --space-L: 80px;
+
+    /* colors */
+
+    --color-blue: #255ee9;
+    --color-dark-grey: #292841;
+    --color-violet: #8590ff;
+    --color-beige: #f5f5f5;
+    --color-white: #ffffff;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border:1px solid grey;
-
+    color: var(--color-dark-grey);
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:var( --color-dark-grey);
+    color: var(--color-dark-grey);
 }
 
 a {
     text-decoration: none;
 }
-h1{
+
+h1 {
     font-size: 3rem;
 }
-h2{font-size: 2.5rem;
+
+h2 {
+    font-size: 2.5rem;
+    padding: 20px 10px;
 }
-h3{
+
+h3 {
     font-size: 2rem;
 }
 
-p{
+p {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #555468;   
 }
-
 
 /* class-utilities .............. */
 .container {
     width: 920px;
     margin: auto;
-   /*  border: 1px solid red; */
+    /*  border: 1px solid red; */
 }
-.btn{
-    background-color: white;
-    color: black;
+
+.btn {
+    background-color: var( --color-white);
+    color: var(--color-dark-grey);
     border-radius: 50px;
-    padding:14px 20px;
+    padding: 14px 20px;
     font-weight: 500;
 }
-.btn.small{
+
+.btn.small {
     padding: 6px 16px;
 }
 
 .btn.black {
-    background-color: rgb(34, 32, 39);
-    color: white;
+    background-color:var(--color-dark-grey);
+    color: var(--color-white);
 }
-
-.btn.download:before {
-    content: "\2193";
-    padding-right: 1rem;
+.btn.blue {
+    background-color: var(--color-violet);
+    color: var(--color-white);
 }
-
-.btn.blue{
-    background-color: #7289DA;
-    color: rgb(255, 255, 255); 
+.btn i{
+    padding-right: 5px;
 }
-
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 /* nav ........................... */
 nav {
-    background-color: #255EE9;
-    padding: var( --small-space);
+    background-color: var(--color-blue);
+    padding: var(--space-XS) 0;
+    font-size: 1rem;
 }
 
 header nav .container {
     display: flex;
     justify-content: space-between;
 }
-  
+
 header .nav-link {
     flex-grow: 1;
 }
@@ -98,8 +103,14 @@ header .nav-login {
     min-width: 150px;
 }
 
-header .nav-link ul{
+header .nav-link ul {
     text-align: center;
+}
+
+header .nav-link li,
+footer .footer-social i {
+    padding: 0 var(--space-S);
+
 }
 
 header .nav-logo>*,
@@ -109,33 +120,42 @@ header .nav-login a {
     vertical-align: middle;
     height: 100%;
 }
+
 header .nav-login {
     text-align: right;
 }
+
 header *,
 footer * {
-    color: white;
+    color: var(--color-white);
 }
 
 /* rendere più ampia l'area cliccabile dei link */
 .nav-link * {
     height: 100%;
 }
+
 .nav-link a {
     display: flex;
     align-items: center;
     text-transform: capitalize;
 }
+
 header article .description {
-    padding-bottom: var( --title-bottom-space);
+    padding-bottom: var(--space-S);
 }
 
-.article-btn{
-padding: var( --small-space);
+.article-btn {
+    padding: var(--space-S);
 }
-.article-btn>*{
+
+.article-btn>* {
     display: inline;
-    padding: 0px 20px;
+    padding: 0 var(--space-S);
+}
+
+header article .btn i{
+    color: #292841;
 }
 
 
@@ -145,7 +165,8 @@ header article {
     background-image: url(../img/jumbo.png);
     background-size: cover;
     background-position: center;
-    padding: var(--large-space);}
+    padding: var(--space-L);
+}
 
 header article .container-small {
     margin: auto;
@@ -156,73 +177,113 @@ header article .container-small {
 
 /* main  section ......................*/
 main section {
-    padding: var(--large-space);
+    padding: var(--space-L);
 }
+
 main section .container {
     display: flex;
 }
 
+main .row .container {
+    gap: var(--space-M);
+}
+
 .section-img {
     flex-grow: 3;
-  flex-basis: 60%; 
+    flex-basis: 60%;
 }
-.section-img img{
+
+.section-img img {
     width: 105%;
 }
 
 .section-info {
     flex-grow: 1;
     flex-basis: 40%;
-    
+
 }
+
 section.row-reverse .container {
     flex-direction: row-reverse;
 }
-main section .container{
-    height:400px;}
+
+main section .container {
+    height: 400px;
+}
 
 /* main article......................................... */
-main .article-info{
+main .article-info {
     text-align: center;
 }
 
-main article .title{
-   width: fit-content;
-   margin: auto;
-   padding: var(--medium-space);
+main article .title h3 {
+    width: fit-content;
+    margin: auto;
+    padding: var(--space-M) 0;
     background-image: url(../img/stars.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-main article{
-    padding: var(--large-space);
+main article {
+    padding: var(--space-L);
 }
-/* footer............................ */
-footer section {
-    background-color: rgb(38, 37, 48);
-    padding: var( --small-space)
+main article .btn i{
+    color:#ffffff;
 }
 
+/* footer............................ */
+
+footer section {
+    background-color: var(--color-dark-grey);
+  
+}
 footer .container {
     display: flex;
+    justify-content: space-between;
+    gap: var(--space-M);
+    padding: var(--space-M) 0;
 }
-
-.footer-section_1 .container>* {
-    padding: 40px;
-}
-
 .footer-section_1 .main-col {
-    flex-grow: 2;
+    flex-basis: calc(100%/3);
+}
+.main-col .footer-title h3{
+    padding-bottom: var(--space-S);
+}
+.main-col .footer-language select{
+    background-color: #292841; 
+    border: none;
+}
+.footer-language{
+    display: flex;
+    height: 20px;
+    gap: 5px;
+}
+.main-col .footer-social i{
+    padding: var(--space-S) var(--space-XS);
+}
+.footer-section_1 .footer-social li {
+    display: inline-block;
+}
+footer .col ul {
+    list-style-type: none;
+    line-height: 2.6rem;
 }
 
-.footer-section_2 {
-    border-top: 1px solid white;
+footer .col-title h4,
+footer .footer-title h3 {
+    color: var(--color-violet);
 }
-
 .footer-section_2 .container {
     justify-content: space-between;
-    padding: var( --small-space);
+    padding: var(--space-S);
+    border-top: 1px solid var(--color-violet);
+    
 }
+
+
+
+
+
 
 

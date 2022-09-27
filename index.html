@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISCORD REPLACEMENT</title>
     <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://kit.fontawesome.com/a19b158346.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -70,10 +73,12 @@
                     </div>
                     <div class="article-btn">
                         <div>
-                            <a class="btn download" href="">Scarica per Mac</a>
+                            <a class="btn download" href="">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                Scarica per Mac</a>
                         </div>
                         <div>
-                            <a class="btn black"  href="">Apri Discord nel tuo browser</a>
+                            <a class="btn black" href="">Apri Discord nel tuo browser</a>
                         </div>
 
                     </div>
@@ -163,7 +168,13 @@
 
                     <div class="article-btn">
                         <div>
-                            <a class="btn blue download " href="">Scarica per Mac</a>
+                            <a class="btn blue download " href="">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                Scarica per Mac</a>
+                            <div>
+                               
+                                   
+                            </div>
                         </div>
 
 
@@ -180,30 +191,34 @@
                 <div class="main-col footer-info">
 
                     <div class="footer-title">
-                        <h4>Il tuo posto per parlare</h4>
+                        <h3>Il tuo posto per parlare</h4>
                     </div>
 
-                    <div class="footer-language-selection">
-                      <select name="language" id="language-select">
-                        <option value="italian" selected>
-                            <img src="img/ita.png" alt="italiano" >
-                        </option>
-                      </select>
+                    <div class="footer-language">
+                        <img  id="ita-flag"src="img/ita.png" alt="flag">
+                        <select name="language" id="language-select">
+                            <option id="italian" value="italian" selected>
+                                <div>
+                                    italiano
+                                </div>
+                               
+                            </option>
+                        </select>
                     </div>
 
                     <div class="footer-social">
                         <ul>
                             <li>
-                                <a id="twitter" href="#"> </a>
+                                <i class="fa-brands fa-twitter"></i>
                             </li>
                             <li>
-                                <a id="instagram" href="#"> </a>
+                                <i class="fa-brands fa-instagram"></i>
                             </li>
                             <li>
-                                <a id="facebook" href="#"> </a>
+                                <i class="fa-brands fa-facebook"></i>
                             </li>
                             <li>
-                                <a id="youtube" href="#"> </a>
+                                <i class="fa-brands fa-youtube"></i>
                             </li>
                         </ul>
                     </div>
@@ -211,12 +226,17 @@
 
                 <div class="col footer-column">
                     <ul>
-                        <li>
-                            prodotto
+                        <li class="col-title">
+                            <h4>prodotto</h4>
                         </li>
                         <li>
                             <a href="#">
                                 scarica
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                perchè discord
                             </a>
                         </li>
                         <li>
@@ -226,7 +246,12 @@
                         </li>
                         <li>
                             <a href="#">
-                                stato
+                                sicurezza
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                assistenza
                             </a>
                         </li>
                     </ul>
@@ -234,13 +259,13 @@
 
                 <div class="col footer-column">
                     <ul>
-                        <li>
-                            Compagnia
+                        <li class="col-title">
+                            <h4>Compagnia</h4>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               chi siamo
+                                chi siamo
                             </a>
                         </li>
                         <li>
@@ -255,7 +280,12 @@
                         </li>
                         <li>
                             <a href="#">
-                               redazione
+                                redazione
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                negozio
                             </a>
                         </li>
                     </ul>
@@ -263,8 +293,8 @@
 
                 <div class="col footer-column">
                     <ul>
-                        <li>
-                            risorse
+                        <li class="col-title">
+                            <h4>risorse</h4>
                         </li>
                         <li>
                             <a href="#">
@@ -306,8 +336,8 @@
 
                 <div class="col footer-column">
                     <ul>
-                        <li>
-                         Norme
+                        <li class="col-title">
+                            <h4>norme</h4>
                         </li>
                         <li>
                             <a href="#">
@@ -350,12 +380,13 @@
         </section>
 
         <section class="footer-section_2">
-            <div class="container">
-                <div class="footer-btn">
-                    <a href="#">logo</a>
+            <div class="container ">
+                <div class="nav-logo">
+                    <img class="logo-img" src="img/logo.svg" alt="discord's logo"></img>
+
                 </div>
                 <div>
-                    <a class="btn blue small" href="#">bottone </a>
+                    <a class="btn blue small" href="#">registrati</a>
                 </div>
 
             </div>
