@@ -1,20 +1,50 @@
 /* generic */
+:root{
+    --color-dark-grey:#232T2A;
+    --color-violet:rgb(126,145.208);
+    --title-bottom-space:20px;
+    --small-space:10px 0px;
+    --medium-space:40px 0px;
+    --meidum-bottom-space:40px; 
+    --large-space:80px;
+    --large-bottom-space: 80px;
+   
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border:1px solid grey;
+
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:var( --color-dark-grey);
 }
 
 a {
     text-decoration: none;
 }
+h1{
+    font-size: 3rem;
+}
+h2{font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555468;   
+}
 
 
-/* class-utilities */
+/* class-utilities .............. */
 .container {
     width: 920px;
     margin: auto;
@@ -51,14 +81,14 @@ a {
 /* nav ........................... */
 nav {
     background-color: #255EE9;
-    padding: 15px 0px;
+    padding: var( --small-space);
 }
 
 header nav .container {
     display: flex;
     justify-content: space-between;
 }
-
+  
 header .nav-link {
     flex-grow: 1;
 }
@@ -68,7 +98,7 @@ header .nav-login {
     min-width: 150px;
 }
 
-header .nav-link ul {
+header .nav-link ul{
     text-align: center;
 }
 
@@ -81,9 +111,7 @@ header .nav-login a {
 }
 header .nav-login {
     text-align: right;
-    height: 100%;
 }
-
 header *,
 footer * {
     color: white;
@@ -93,20 +121,21 @@ footer * {
 .nav-link * {
     height: 100%;
 }
-
 .nav-link a {
     display: flex;
     align-items: center;
-    padding: 8px 15px;
     text-transform: capitalize;
 }
-header article .article-btn {
-    padding-top: 20px;
+header article .description {
+    padding-bottom: var( --title-bottom-space);
 }
 
+.article-btn{
+padding: var( --small-space);
+}
 .article-btn>*{
     display: inline;
-    padding: 0px 5px;
+    padding: 0px 20px;
 }
 
 
@@ -116,8 +145,7 @@ header article {
     background-image: url(../img/jumbo.png);
     background-size: cover;
     background-position: center;
-    padding-top: 100px;
-padding-bottom:80px;}/* ggdfhrtjdtykrtyk67ik */
+    padding: var(--large-space);}
 
 header article .container-small {
     margin: auto;
@@ -126,28 +154,9 @@ header article .container-small {
     text-align: center;
 }
 
-header article .title {
-    font-size: 3rem;
-}
-/* /* class-utilities */ 
- .title {
-    font-size: 1.5rem;
-    letter-spacing: -2px;
-    padding: 10px 0px;
-}
-
-/* /* class-utilities */ 
-.description {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 10px 0px;
-    color: #555468;   
-    
-}
-
 /* main  section ......................*/
 main section {
-    padding: 80px 0px;
+    padding: var(--large-space);
 }
 main section .container {
     display: flex;
@@ -177,23 +186,22 @@ main .article-info{
     text-align: center;
 }
 
-main article .title h3{
-    font-size: 2rem;
+main article .title{
    width: fit-content;
    margin: auto;
-   padding: 40px;  
+   padding: var(--medium-space);
     background-image: url(../img/stars.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 main article{
-    padding: 120px 0px;
+    padding: var(--large-space);
 }
 /* footer............................ */
 footer section {
     background-color: rgb(38, 37, 48);
-    padding: 10px;
+    padding: var( --small-space)
 }
 
 footer .container {
@@ -214,7 +222,7 @@ footer .container {
 
 .footer-section_2 .container {
     justify-content: space-between;
-    padding: 10px;
+    padding: var( --small-space);
 }
 
 
