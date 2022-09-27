@@ -86,6 +86,7 @@ p {
 /* effetti */
 .btn:hover{
     box-shadow: 0px 10px 10px #29284141;
+    transition:1s;
 }
 
 .btn.blue:hover{
