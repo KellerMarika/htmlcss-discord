@@ -1,3 +1,8 @@
 MAI PIù ALTEZZE STATICHE!!!!!
+svg.wave-1hkxOo{
+    margin-bottom: -5px; 
+    /* era meglio usare il position */
+}
+
 
 secondo me davrei dovuto fare più var con altezze di testo globali
